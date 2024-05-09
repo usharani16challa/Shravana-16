@@ -1,0 +1,59 @@
+/*
+Time complexity:O(N*T)
+For enQueue():O(1)
+For deQueue():O(N)
+For peek():O(N)
+For isEmpty():O(1)
+Space Complexity:O(N)
+Where 'N' is the maximum number of elements that are in the stack at any time .
+Where 'T' is the total number of queries which are performed .
+*/
+#include<stack>
+class Queue {
+  //Only one user stack is used.
+  st=new stack<int>();
+  }
+//EnQueue item to the queue.
+void enQueue(int val){
+  //Push the value into the stack.
+  st->push(val);
+  }
+//Dequeue an item from the queue.
+int deQueue(){
+  return-1;
+  }
+//Pop the current top element.
+=st->top();
+st->pop();
+//Base case of the recursion .
+if (st->empty()){
+  return x;
+  }
+//Recursively pop the next element .
+int nxt=deQueue();
+//Push this element again to the stack.
+st->push(x);
+return nxt;
+}
+//Return the Front element of teh queue.
+intpeek(){
+  if(st->empty()){
+    -1;
+    }
+  intx=st->top();
+  st->pop();
+  if(st->empty()){
+    st->push(x);
+    return x;
+    }
+  intnxt =peek();
+  st->push(x);
+  return nxt;
+  }
+
+  //Whether the queue is empty or not .
+boolisEmpty(){
+  return(st->emlty());
+  }
+};
+
